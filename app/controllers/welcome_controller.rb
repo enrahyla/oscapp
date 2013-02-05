@@ -21,4 +21,7 @@ class WelcomeController < ApplicationController
   def lessons
   end
 
+  def images
+  end
+
 end

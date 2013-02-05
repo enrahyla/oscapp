@@ -32,43 +32,46 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container"> <!--start of container-->
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html" title="Oval Ski Club">Oval Ski Club</a> <!--site name-->
+
+          <!--site name-->
+          <a class="brand" href="index.html" title="Oval Ski Club">Oval Ski Club</a> 
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="index.html" title="Home" accesskey="h">Home</a></li>
-    
+              <!--Home link-->
+              <li class="active"><a href="index.html" accesskey="h" title="Home" >Home</a></li>
+
               <!-- first drop down box-->
               <li class="dropdown"> 
-                <a href="#"  title="Information"class="dropdown-toggle" data-toggle="dropdown">Information <b class="caret"></b></a>
-
-                <!--Information drop down-->
+                <a href="#"  title="Information"class="dropdown-toggle" data-toggle="dropdown" title="Information">Information <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="AboutUs.html" title="About Us" accesskey="a">About Us</a></li>
-                  <li class="active"><a href="ContactUs.html"title="Contac Us" accesskey="c">Contact Us</a></li>
-                  <li><a href="FAQ.html"title="Frequently Asked Questions" accesskey="q">FAQ's</a></li>
+
+                  <li><a href="aboutus" title="About Us"accesskey="a">About Us</a></li>
+                  <li><a href="contactus"title="Contact Us" accesskey="c">Contact Us</a></li>
+                  <li><a href="faq"title="Frequently Asked Questions" accesskey="q">FAQ's</a></li>
                 </ul>
               </li>
 
-               <!-- Events drop down box-->
-               <li class="dropdown">
+              <!-- second drop down box-->
+               <li class="dropdown"> 
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Events">Events <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="Social.html"title="Social Events" accesskey="s">Social</a></li>
-                  <li><a href="RacingTeam.html"title="Racing Team" accesskey="r">Racing Team</a></li>
-                  <li><a href="Sessions.html"title="Lessons" accesskey="l">Lessons</a></li>
+                  <li><a href="social"title="Social Events"accesskey="s">Social</a></li>
+                  <li><a href="racingteam"title="Racing Team"accesskey="r">Racing Team</a></li>
+                  <li><a href="lessons"title="Lessons" accesskey="l">Lessons</a></li>
                 </ul>
               </li>
             </ul> 
-   
-            <!-- drop down sign in-->
+
+    
+          <!-- drop down sign in-->
           <ul class="nav pull-right">
           <li class="divider-vertical"></li>
           <li class="dropdown">
@@ -78,19 +81,21 @@
 
               <!-- Login form here -->
             <form action="index.html">
+              
               <!--Username-->
             <input style="margin-bottom: 15px;" type="text" placeholder="Username" size="30" title="Userame"/> 
+
             <!--Password-->
             <input style="margin-bottom: 15px;" type="password" placeholder="Password" name="user[password]" size="30" title="Password"/>
 
+            <!--Sign In-->
             <button <input class= "btn btn-primary"  name="commit" value="Sign In" title="Sign In">Sign In</button>
           </form>
           </div>
         </div><!--/.nav-collapse -->
-      </div>
+      </div><!--end of container-->
     </div>
-  </div>
-
+  </div> 
     <div class="container">
 
       <!-- Hero unit -->
