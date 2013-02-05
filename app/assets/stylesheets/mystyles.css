@@ -8,12 +8,12 @@
 
 body
 {
-	background-image:url(assets/img/gplaypattern.png);
+	background-image:url(../assets/gplaypattern.png);
 }
 
 .hero-unit
 {
-	background-image:url(assets/img/heroimage2.jpg);
+	background-image:url(../assets/heroimage2.jpg);
 	color: #000000
 }
 
