@@ -1,0 +1,9 @@
+<h1>All Articles</h1>
+
+<ul>
+  <% @events.each do |events| %>
+    <li>
+      <%= link_to events.title, events_path(events) %>
+    </li>
+  <% end %>
+</ul>
