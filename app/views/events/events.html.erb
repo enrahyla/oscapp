@@ -1,9 +1,9 @@
-<h1>All Articles</h1>
+</h1>All Events</h1>
 
 <ul>
-  <% @events.each do |events| %>
-    <li>
-      <%= link_to events.title, events_path(events) %>
-    </li>
-  <% end %>
+	<% @events.each do |event| %>
+	<li>
+		<%= link_to event.title, event_path(event) %>
+	</li>
+	<% end %>
 </ul>
