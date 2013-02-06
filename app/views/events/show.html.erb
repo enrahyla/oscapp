@@ -1,4 +1,6 @@
-<h1><%= @events.title %></h1>
+<h1><%= @event.title %></h1>
 
-<p><%= @events.body %></p>
+<p><%= @event.body %></p>
 <%= link_to "<<Back to Events List", events_path %>
+
+<%= link_to "Delete", event_path(@event), method: :delete %>

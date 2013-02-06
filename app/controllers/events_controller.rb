@@ -5,10 +5,22 @@ class EventsController < ApplicationController
 	end
 
 	def show
-		@events = Event.find(params[:id])
+		@event = Event.find(params[:id])
 	end
 
 	def new
-	@events = Event.new 
+	@event = Event.new 
+	end
+
+	def create
+		@event = Event.new(params[:event])
+		@event.save
+		redirect_to event_path(@event)
+	end
+
+	def destory	
+		@event = Event.find(params[:id])
+		@event.destroy
+		redirect_to events_path(@events)
 	end
 end

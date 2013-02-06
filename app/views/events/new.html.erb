@@ -1,8 +1,8 @@
 <h1>Create a new event</h1>
 
-<%= form_for(@events) do |f| %>
+<%= form_for(@event) do |f| %>
 	<ul>
-		<% @events.errors.full_messages.each do |error| %>
+		<% @event.errors.full_messages.each do |error| %>
 		<li><%= error %></li>
 		<% end %>
 	</ul>
