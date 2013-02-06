@@ -9,6 +9,7 @@ Oscapp::Application.routes.draw do
   get 'welcome/social'
   get 'welcome/racingteam'
   get 'welcome/lessons'
-  get 'events/events'
   
+
+  resources :events
 end
