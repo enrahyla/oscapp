@@ -1,5 +1,8 @@
 Oscapp::Application.routes.draw do
   
+  resources :diaries
+
+
   root :to => 'welcome#index'
 
   get 'welcome/index'
