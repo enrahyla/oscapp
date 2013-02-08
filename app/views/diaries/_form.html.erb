@@ -1,14 +1,21 @@
+<div class = "container">
+  <div class = "pagination-centered">
+
 <%= form_for @diary, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
-      <%= f.datetime_select :title, :class => 'datetime_select' %>
+      <%= f.datetime_select :title, order: [:day, :month, :year], :class => 'datetime_select' %>
+      <br>
+      <br>  
     </div>
   </div>
+
+
   <div class="control-group">
     <%= f.label :body, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :body, :class => 'text_area' %>
+      <%= f.text_area :body, :rows => '8' %>
     </div>
   </div>
 
@@ -17,4 +24,8 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 diaries_path, :class => 'btn' %>
   </div>
+</div>
+</div>
+  
+
 <% end %>

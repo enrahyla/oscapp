@@ -1,3 +1,4 @@
+<div class = "container">
 <%- model_class = Event -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
@@ -33,6 +34,8 @@
   </tbody>
 </table>
 
+
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_event_path,
             :class => 'btn btn-primary' %>
+            </div>

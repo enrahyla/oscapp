@@ -1,3 +1,4 @@
+
     <div class="container">
 
       <!-- Main hero unit -->
@@ -9,8 +10,9 @@
         <br>
       </div>
 
-      <!--make scrollable add diary events -->
-      <div class="span14" style="max-height:200px; overflow-y:scroll;   border-top: 5px solid #205090;">
+      <div class ="pagination-centered">
+      <div class="pagination_centered" style="max-height:200px; overflow-y:scroll;   border-top: 5px solid #205090;">
+
         <%- model_class = Diary -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
@@ -19,7 +21,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:date) %></th>
       <th><%= model_class.human_attribute_name(:body) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -29,9 +31,9 @@
     <% @diaries.each do |diary| %>
       <tr>
         <td><%= link_to diary.id, diary_path(diary) %></td>
-        <td><%= diary.title %></td>
+        <td><%= diary.title.strftime("%d/%m/%Y %H:%M")  %></td>
         <td><%= diary.body %></td>
-        <td><%=l diary.created_at %></td>
+        <td><%=l diary.created_at%></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_diary_path(diary), :class => 'btn btn-mini' %>
@@ -53,6 +55,7 @@
             <br>
           </div>
         </div>
+      </div>
         <br>
         <br>
 
