@@ -11,6 +11,8 @@
   <dd><%= @diary.body %></dd>
 </dl>
 
+<% if logged_in? %>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               diaries_path, :class => 'btn'  %>
@@ -23,3 +25,4 @@
               :class => 'btn btn-danger' %>
   </div>
 </div>
+<% end %>

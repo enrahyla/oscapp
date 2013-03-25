@@ -94,15 +94,29 @@
 
               <!-- Login form here -->
             <form action="index">
+              <hr>
+              <h6>
+                <% if logged_in? %>
+                  <%= "Logged in as #{current_user.username}" %>
+                  <%= link_to "(logout)", logout_path %>
+                <% else %>
+                <%= link_to "(login)", login_path %>
+                 
+                
               
               <!--Username-->
-            <input style="margin-bottom: 15px;" type="text" placeholder="Username" size="30" title="Userame"/> 
+            <!--<input style="margin-bottom: 15px;" type="text" placeholder="Username" size="30" title="Userame"/> 
 
-            <!--Password-->
+            
             <input style="margin-bottom: 15px;" type="password" placeholder="Password" name="user[password]" size="30" title="Password"/>
 
-            <!--Sign In-->
+         
             <button <input class= "btn btn-primary"  name="commit" value="Sign In" title="Sign In">Sign In</button>
+
+            <a class="btn" href="../authors/index" title ="Sign Up">Sign Up</a>-->  
+
+            <% end %>
+              </h6>
           </form>
           </div>
         </div><!--/.nav-collapse -->

@@ -259,3 +259,25 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+WEBSITE
+  This website is for Oval Ski Club providing information such as the latest questions and answers prices for skiing, important diary dates and general information on the Oval Ski Club.
+  The website consist of 8 pages:
+  |-- Website
+  | |--Home: locahost:3000
+  | |--About: welcome/about
+  | |--Contact Us: welcome/contactus
+  | |--FAQ's: welcome/faq
+  | |--Social: welcome/social
+  | |---- This provides an extra page for events to be added. The button on the page will take you to /events.
+  | |--Racing Team: welcome/racingteam
+  | |--lessons: /diaries
+
+Database
+  The Diaries page on the website and the Events page allow the addition of events or diary dates. Both pages display what is currently held in the database and allow for any additonal information to be added, editted or deleted.
+  This is done by using the three available buttons on the page. These allow a creation of a new event in which a string of text requires to be added as a title and text about the event in the body.
+  The diaries on the other hand also provides a create edit and delete fucntion. The title for the diaries instead requires a date and time to be selected, this should be the date and time of an event that people may need to know. More information can be added into the body giving information about the event.
+  Each database will save the information that has been input when the submit button has been selected.
+
+
+

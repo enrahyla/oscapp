@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
 
+	before_filter :require_login, only: [:create, :destroy, :edit, :update]
+
 	def index
-		@events = Event.all
+		@events = Event.all.reverse
 	end
 
 	def announcements

@@ -1,8 +1,11 @@
 class DiariesController < ApplicationController
+
+before_filter :require_login, only: [:create, :destroy, :edit, :update]
+
   # GET /diaries
   # GET /diaries.json
   def index
-    @diaries = Diary.all
+    @diaries = Diary.all.reverse
 
     respond_to do |format|
       format.html # index.html.erb
