@@ -1,5 +1,6 @@
 <div class = "container">
   <div class = "pagination-centered">
+
 <%= form_for @event, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
@@ -15,9 +16,10 @@
   </div>
 
   <div class="form-actions">
+
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                events_path, :class => 'btn' %>
+                events_path, id: "new_link", :class => 'btn' %>
   </div>
 </div>
 </div>

@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all.reverse
+		format.html
+		format.xml {render :xml => @events }
 	end
 
 	def announcements
@@ -16,19 +18,30 @@ class EventsController < ApplicationController
 
 	def new
 	@event = Event.new 
+	respond_to do |format|
+			format.html { redirect_to event_path(@event)}
+			format.js
 	end
+end
 
 	def create
 		@event = Event.new(params[:event])
 		@event.save
-		redirect_to event_path(@event)
+		respond_to do |format|
+			format.html { redirect_to event_path(@event)}
+			format.js
+		
 	end
+end
 
 	def destroy	
 		@event = Event.find(params[:id])
 		@event.destroy
 		flash.notice = "Event '#{@event.title}' Destroyed"
-		redirect_to events_path(@events)
+		respond_to do |format|
+			format.html { redirect_to events_path(@events) }
+			format.js
+		end		
 	end
 
 	def edit
@@ -39,6 +52,9 @@ class EventsController < ApplicationController
 		@event = Event.find(params[:id])
 		@event.update_attributes(params[:event])
 		flash.notice = "Event '#{@event.title}' Updated!"
-		redirect_to event_path(@event)
+		   respond_to do |format|
+      format.html { redirect_to event_path(@event) }
+      format.js
+		end
 	end
 end
