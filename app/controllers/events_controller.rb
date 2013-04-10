@@ -4,8 +4,8 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all.reverse
-		format.html
-		format.xml {render :xml => @events }
+		#format.html
+		#format.xml {render :xml => @events }
 	end
 
 	def announcements
@@ -57,4 +57,4 @@ end
       format.js
 		end
 	end
-end
+end #end

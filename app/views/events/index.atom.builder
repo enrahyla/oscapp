@@ -4,7 +4,8 @@ atom_feed do |feed|
   @events.each do |event|
     feed.entry(event) do |entry|
       entry.author do |author|
-        author.name event.author.username
+        author.name "Adam Hyland"
+       # author.name event.author.username
       end
       entry.title(event.title)
       entry.content(event.body, :type => 'html')

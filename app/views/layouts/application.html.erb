@@ -36,7 +36,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
       <%= yield :head %>
+      
   </head>
 
   <body>
@@ -127,14 +129,17 @@
 
 	<p class="flash"><% flash.notice %></p>
 	<%= yield %>
+  <br>
+  <br>
         <footer>
-          <%= link_to image_tag('feed-icon-28x28.png'), articles_url(format: :atom) %>
+         
 
       <div class="span1"> <!-- facebook link-->
-      <div class="brand">  <a href="https://www.facebook.com/groups/2256597544/"><img src="../assets/fbbutton.jpg" class="brand" title="Facebok Page"></a></div>
+      <div class="brand">  <a href="https://www.facebook.com/groups/2256597544/"><img src="../assets/fbbutton.jpg" class="brand" title="Facebok Page"></a></div> 
     </div>
       <hr>
       <div class="pagination-centered">
+        <%= link_to image_tag('feed-icon-14x14.png'), events_url(format: :atom) %>
         <p>&copy; Oval Ski Club 2012</p>
       </div>
       </footer>
